@@ -24,6 +24,6 @@
     "csso": "^5.0.5"
   },
   "dependencies": {
-    "tinacms": "^1.6.4"
+    "tinacms": "^2.6.2"
   }
 }
