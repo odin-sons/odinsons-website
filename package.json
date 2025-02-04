@@ -9,7 +9,8 @@
   },
   "scripts": {
     "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve --incremental"
+    "start": "npx @11ty/eleventy --serve",
+    "cms": "npx tinacms dev -c \"npm start\""
   },
   "keywords": [],
   "author": "Andrew Gurylev <andrew@gurylev.com>",
