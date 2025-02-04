@@ -1,0 +1,29 @@
+.header {
+  display: block;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  letter-spacing: -0.02em;
+  padding: 0 var(--gap);
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: var(--c-background-page);
+  background-image: linear-gradient(
+    to bottom,
+    var(--c-background-page),
+    transparent
+  );
+  opacity: 0.95;
+  box-shadow: 1px 1px 10px var(--c-text-shadow);
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru" class="document">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/css/index.css">
+    <style>
+    @font-face{font-family:"Averia Serif Libre";src:url(/fonts/AveriaSerifLibre-Regular.woff2)format("woff2")}@font-face{font-family:"Averia Serif Libre";src:url(/fonts/AveriaSerifLibre-Italic.woff2)format("woff2");font-style:italic}@font-face{font-family:"Averia Serif Libre";src:url(/fonts/AveriaSerifLibre-Bold.woff2)format("woff2");font-weight:700}@font-face{font-family:"Averia Serif Libre";src:url(/fonts/AveriaSerifLibre-Bold.woff2)format("woff2");font-weight:light}:root{--c-palette-1:#2b1e14;--c-palette-2:#452b18;--c-palette-3:#f7d6a9;--c-palette-4:#998e8a;--c-palette-5:#a56c37;--c-palette-6:#f6c06f;--c-background-page:var(--c-palette-2);--c-background-content:var(--c-palette-1);--c-text:var(--c-palette-3);--c-text-shadow:var(--c-palette-1);--c-accents-primary:var(--c-palette-5);--c-accents-primary-hover:var(--c-palette-5);--c-accents-primary-active:var(--c-palette-5);--c-accents-secondary:var(--c-palette-3);--c-accents-secondary-hover:var(--c-palette-3);--c-accents-secondary-active:var(--c-palette-3);--font-stack-sans:'Averia Serif Libre', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;--font-stack-mono:Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;--font-size-base:16px;--line-height-base:1.5rem;--gap:1rem;--outline-width:2px;--container-width:34rem;--col-width:16rem;--full-width:calc(var(--col-width) * 2 + var(--container-width));--post-width:calc(var(--col-width) + var(--container-width));--sides:calc(var(--col-width) * 4 + var(--container-width) + 2rem);--z-index-menu:1000}@media (min-width:768px){:root{--font-size-base:18px;--gap:1.25rem}}@media (min-width:1024px){:root{--font-size-base:20px;--gap:1.5rem}}.document{font-family:var(--font-stack-sans);font-size:var(--font-size-base);color:var(--c-text);text-shadow:1px 1px 2px var(--c-text-shadow);background-color:var(--c-background-page);background-image:radial-gradient(ellipse at top,var(--c-background-page) 50%,var(--c-background-content));scroll-behavior:smooth;scrollbar-color:var(--c-accents-primary) var(--c-accents-secondary);scrollbar-width:thin}.document,.page{min-height:100%;padding:0;margin:0}.header{display:block;position:sticky;z-index:2;top:0;left:0;right:0;text-align:center;letter-spacing:-.02em;padding:0 var(--gap)}.header::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;pointer-events:none;background:var(--c-background-page);background-image:linear-gradient(to bottom,var(--c-background-page),transparent);opacity:.95;box-shadow:1px 1px 10px var(--c-text-shadow)}.nav{display:block;margin:0 calc(var(--gap)*-.5)}.nav__list{display:inline-flex;flex-wrap:wrap;gap:var(--outline-width);list-style:none;padding:0;margin:0}.nav__item{display:inline-flex;position:relative}.nav__link{width:100%;padding:.5rem calc(var(--gap)*.5);text-decoration:none}.nav__link:focus,.nav__link:hover{transition:all .2s ease-out;outline-width:var(--outline-width);outline-style:solid;outline-color:var(--theme-accent)}.nav__link:focus .nav__text,.nav__link:hover .nav__text{color:var(--theme-secondary)}.nav__text{display:block;text-decoration:underline var(--theme-secondary);color:var(--theme-accent);white-space:nowrap}.nav__excerpt{display:block;margin-top:.2em;font-size:.75em;color:var(--theme-secondary)}.nav__item--submenu.nav__item--active,.nav__link--active{outline-width:var(--outline-width);outline-style:dashed;outline-color:var(--theme-accent)}.nav__item--submenu{position:relative}.nav__item--submenu>ul{position:absolute;left:calc(var(--outline-width)*-1);top:calc(100% + var(--outline-width));z-index:var(--z-index-menu);min-width:max-content;margin:0;padding:0;list-style:none;display:inline-flex;flex-wrap:wrap;flex-direction:column;opacity:0;transition:opacity .2s ease-in;pointer-events:none;background-color:var(--theme-background);border:var(--outline-width) solid var(--theme-background-shadowed)}.nav__item--submenu>ul:before{content:"";position:absolute;top:calc(var(--outline-width)*-2);left:0;width:100%;height:var(--outline-width)}.nav__item--submenu:focus-within>ul,.nav__item--submenu:focus>ul,.nav__item--submenu:hover>ul{opacity:1;pointer-events:all}a{color:var(--c-accents-primary);text-decoration:underline dashed;text-decoration-thickness:.05rem;text-decoration-skip:spaces objects edges box-decoration;text-decoration-skip-ink:auto;transition:color .2s ease-out}a:focus,a:hover{color:var(--c-accents-primary)}.screen-reader-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}.screen-reader-only:focus{position:static;width:auto;height:auto;clip:auto;overflow:visible}
+    </style>
+    
+    <link rel="alternate" href="." type="application/atom+xml" title="">
+  </head>
+  <body class="page ">
+    <div class="container">
+      <header class="header" id="top">
+        
+
+
+<nav class="nav">
+  <ul class="nav__list">
+    <li class="nav__item">
+      <a href="#main" class="nav__link screen-reader-only">Пропустить навигацию</a>
+    </li>
+  <li
+    class="
+      nav__item
+      
+      nav__item--active
+    "
+  >
+    <a
+      class="
+        nav__link
+        nav__link--active
+      "
+      href="/"
+      aria-current="page"
+    >
+    <span class="nav__text">Главная</span>
+    <span class="nav__excerpt"></span>
+    </a></li>
+</ul>
+</nav>
+
+      </header>
+      <h1>tesr</h1>
+<p>tres</p>
+
+      <footer id="bottom"></footer>
+    </div>
+  </body>
+</html>

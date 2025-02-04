@@ -1,0 +1,60 @@
+:root {
+  /* Palette */
+  --c-palette-1: #2b1e14;
+  --c-palette-2: #452b18;
+  --c-palette-3: #f7d6a9;
+  --c-palette-4: #998e8a;
+  --c-palette-5: #a56c37;
+  --c-palette-6: #f6c06f;
+
+  /* Theme */
+  --c-background-page: var(--c-palette-2);
+  --c-background-content: var(--c-palette-1);
+  --c-text: var(--c-palette-3);
+  --c-text-shadow: var(--c-palette-1);
+
+  --c-accents-primary: var(--c-palette-5); /* primary CTA: links, buttons*/
+  --c-accents-primary-hover: var(--c-palette-5);
+  --c-accents-primary-active: var(--c-palette-5);
+
+  --c-accents-secondary: var(--c-palette-3); /* secondary CTA: non-priority links, buttons*/
+  --c-accents-secondary-hover: var(--c-palette-3);
+  --c-accents-secondary-active: var(--c-palette-3);
+
+  /* Font stacks */
+  --font-stack-sans: 'Averia Serif Libre', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-stack-mono: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+
+  /* Typography */
+  --font-size-base: 16px;
+  --line-height-base: 1.5rem;
+
+  /* Spaces */
+  --gap: 1rem;
+
+  --outline-width: 2px;
+
+  /* Grid */
+  --container-width: 34rem;
+  --col-width: 16rem;
+
+  --full-width: calc(var(--col-width) * 2 + var(--container-width));
+  --post-width: calc(var(--col-width) + var(--container-width));
+  --sides: calc(var(--col-width) * 4 + var(--container-width) + 2rem);
+
+  --z-index-menu: 1000;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --font-size-base: 18px;
+    --gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --font-size-base: 20px;
+    --gap: 1.5rem;
+  }
+}

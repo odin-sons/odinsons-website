@@ -1,0 +1,23 @@
+.document {
+  min-height: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  font-family: var(--font-stack-sans);
+  font-size: var(--font-size-base);
+
+  color: var(--c-text);
+  text-shadow: 1px 1px 2px var(--c-text-shadow);
+
+  background-color: var(--c-background-page);
+  background-image: radial-gradient(
+    ellipse at top,
+    var(--c-background-page) 50%,
+    var(--c-background-content)
+  );
+
+  scroll-behavior: smooth;
+  scrollbar-color: var(--c-accents-primary) var(--c-accents-secondary);
+  scrollbar-width: thin;
+}

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru" class="document">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ renderData.title or title or metadata.title }}</title>
+    <meta name="description" content="{{ renderData.description or description or metadata.description }}">
+    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+    <style>
+    {% set css %}{% include "_includes/styles.css.njk" %}{% endset %}{{ css | cssmin | safe }}
+    </style>
+    {# <link rel="shortcut icon" href="/favicon.png"> #}
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+  </head>
+  <body class="page {{ templateClass }}">
+    <div class="container">
+      <header class="header" id="top">
+        {% include "_includes/header.njk" %}
+      </header>
+      {{ content | safe }}
+      <footer id="bottom"></footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Averia Serif Libre';
+  src: url('/fonts/AveriaSerifLibre-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Averia Serif Libre';
+  src: url('/fonts/AveriaSerifLibre-Italic.woff2') format('woff2');
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Averia Serif Libre';
+  src: url('/fonts/AveriaSerifLibre-Bold.woff2') format('woff2');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Averia Serif Libre';
+  src: url('/fonts/AveriaSerifLibre-Bold.woff2') format('woff2');
+  font-weight: light;
+}
