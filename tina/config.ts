@@ -1,5 +1,9 @@
 import { defineConfig } from "tinacms";
 
+import { introBlock } from "./blocks/intro";
+import { featureBlock } from "./blocks/features";
+import { contentBlock } from "./blocks/content";
+
 // Your hosting provider likely exposes this as an environment variable
 const branch =
   process.env.GITHUB_BRANCH ||
@@ -21,8 +25,8 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "",
-      publicFolder: "uploads",
+      mediaRoot: "uploads",
+      publicFolder: "_site",
     },
   },
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
@@ -34,17 +38,11 @@ export default defineConfig({
         path: "content/posts",
         fields: [
           {
-            type: "string",
-            name: "title",
-            label: "Title",
-            isTitle: true,
-            required: true,
-          },
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
+            type: 'object',
+            list: true,
+            name: 'blocks',
+            label: 'Sections',
+            templates: [introBlock, featureBlock, contentBlock],
           },
         ],
       },
