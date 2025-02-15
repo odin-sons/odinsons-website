@@ -2,6 +2,8 @@
 layout: blocks.njk
 title: 'Hello, World!'
 blocks:
+  - text: Phasellus scelerisque
+    _template: hero
   - body: Lorem ipsum dolor sit ametdsfsdf
     _template: content
   - items:
@@ -9,8 +11,8 @@ blocks:
       - title: sdfsdfsdf
         text: sdfddsf
     _template: features
-  - text: Phasellus scelerisque
-    image: /uploads/invincible-comic-series.webp
+  - text: Phasellus sceleeeerisque
+    image: ''
     _template: hero
 ---
 
