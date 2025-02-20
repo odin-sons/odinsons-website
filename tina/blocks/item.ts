@@ -1,6 +1,13 @@
-import type { TinaField } from 'tinacms'
+import type { Template, TinaField } from 'tinacms'
+import { image } from './image'
 
 export const item: TinaField[] = [
+  {
+    type: 'boolean',
+    name: 'published',
+    label: 'Published',
+    description: 'Toggle to show block, untoggle to hide block'
+  },
   {
     type: 'string',
     label: 'Title',
@@ -15,8 +22,23 @@ export const item: TinaField[] = [
     },
   },
   {
+    type: 'object',
+    label: 'Media',
+    name: 'media',
+    list: true,
+    templates: [
+      image as Template,
+      // TO DO: Embed
+    ],
+  },
+  {
+    type: 'boolean',
+    name: 'reverse',
+    label: 'Reverse'
+  },
+  {
     type: 'image',
-    label: 'Image',
-    name: 'image',
-  }
+    label: 'Background',
+    name: 'background',
+  },
 ]
