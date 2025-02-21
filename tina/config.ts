@@ -1,8 +1,6 @@
 import { defineConfig } from "tinacms";
 
-import { introBlock } from "./blocks/intro";
-import { featureBlock } from "./blocks/features";
-import { contentBlock } from "./blocks/content";
+import * as sections from "./sections";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -33,16 +31,28 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
+        name: "pages",
+        label: "Pages",
+        path: "content/pages",
         fields: [
+          {
+            type: 'boolean',
+            name: 'published',
+            label: 'Published'
+          },
+          {
+            type: 'string',
+            label: 'Page title',
+            name: 'title',
+            isTitle: true,
+            required: true,
+          },
           {
             type: 'object',
             list: true,
-            name: 'blocks',
+            name: 'sections',
             label: 'Sections',
-            templates: [introBlock, featureBlock, contentBlock],
+            templates: Object.values(sections),
           },
         ],
       },
