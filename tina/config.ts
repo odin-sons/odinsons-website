@@ -31,6 +31,44 @@ export default defineConfig({
   schema: {
     collections: [
       {
+        label: 'Site Settings',
+        name: 'siteSettings',
+        path: 'content/settings',
+        format: 'json',
+        fields: [
+          {
+            type: 'string',
+            label: 'Site Title',
+            name: 'title',
+          },
+        ],
+      },
+      {
+        label: 'Site Navigation',
+        name: 'navigation',
+        path: 'content/navigation',
+        format: 'json',
+        fields: [
+          {
+            type: 'string',
+            label: 'Site Title',
+            name: 'title',
+          },
+        ],
+      },
+      {
+        name: "authors",
+        label: "Authors",
+        path: "content/authors",
+        fields: [
+          {
+            type: 'string',
+            name: 'wide',
+            label: 'Wide',
+          }
+        ]
+      },
+      {
         name: "pages",
         label: "Pages",
         path: "content/pages",
@@ -55,6 +93,18 @@ export default defineConfig({
             templates: Object.values(sections),
           },
         ],
+      },
+      {
+        name: "news",
+        label: "News",
+        path: "content/news",
+        fields: [
+          {
+            type: 'string',
+            name: 'wide',
+            label: 'Wide',
+          }
+        ]
       },
     ],
   },
