@@ -1,29 +1,4 @@
-# Website content
+# OdinSons Website
 
-## Blocks pages
-
-### Blocks
-
-* Slider
-* Grid
-* Chess
-* Tabs
-* Accordeon
-
-* Cards
-* Icons
-* List
-
-### default fields of any item
-
-Title
-Text
-
-Link
-Link text
-
-Media
-
-## Article pages
-
-TBD
+Here is website of OdinSons team.
+We're creating servers with mods for Valheim game.
