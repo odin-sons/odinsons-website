@@ -1,16 +1,28 @@
+import { EleventyRenderPlugin } from "@11ty/eleventy";
+
 export default async function(eleventyConfig) {
   const plugins = [
     { packageName: '@11ty/eleventy-plugin-directory-output' },
-    { packageName: '@11ty/eleventy-navigation' }
+    { packageName: '@11ty/eleventy-navigation' },
   ]
   const assetsToCopy = [
     { 'assets/fonts': 'fonts' },
+    { 'assets/img': 'img' },
   ]
+  const importModule = async (name) => {
+    const { default: module } = await import(name)
+    return module
+  }
+
+	eleventyConfig.addPlugin(EleventyRenderPlugin);
+  eleventyConfig.amendLibrary("md", async (mdLib) => {
+    mdLib.use(await importModule("markdown-it-bracketed-spans"))
+    mdLib.use(await importModule("markdown-it-attrs"))
+  });
+
 
   for (const { packageName, options = {} } of plugins) {
-    const { default: importedPlugin } = await import(packageName)
-
-    eleventyConfig.addPlugin(importedPlugin, options)
+    eleventyConfig.addPlugin(await importModule(packageName), options)
   }
 
   const filters = await import("./_11ty/filters.js")
@@ -24,8 +36,4 @@ export default async function(eleventyConfig) {
   }
 
   eleventyConfig.addWatchTarget('assets/css/**/*.css');
-}
-
-export const config = {
-  htmlTemplateEngine: "njk",
 }
