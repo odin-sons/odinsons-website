@@ -8,6 +8,7 @@ export default async function(eleventyConfig) {
   const assetsToCopy = [
     { 'assets/fonts': 'fonts' },
     { 'assets/img': 'img' },
+    { 'assets/site.webmanifest': 'site.webmanifest' },
   ]
   const importModule = async (name) => {
     const { default: module } = await import(name)
