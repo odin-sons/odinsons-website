@@ -1,5 +1,6 @@
 import { defineConfig } from "tinacms";
 
+import * as collections from "./collections";
 import * as sections from "./sections";
 
 // Your hosting provider likely exposes this as an environment variable
@@ -30,36 +31,15 @@ export default defineConfig({
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
     collections: [
-      {
-        label: 'Site Settings',
-        name: 'siteSettings',
-        path: 'content/settings',
-        format: 'json',
-        fields: [
-          {
-            type: 'string',
-            label: 'Site Title',
-            name: 'title',
-          },
-        ],
-      },
-      {
-        label: 'Site Navigation',
-        name: 'navigation',
-        path: 'content/navigation',
-        format: 'json',
-        fields: [
-          {
-            type: 'string',
-            label: 'Site Title',
-            name: 'title',
-          },
-        ],
-      },
+      collections.settings,
       {
         name: "authors",
         label: "Authors",
         path: "content/authors",
+        match: {
+          include: '*',
+        },
+        format: 'md',
         fields: [
           {
             type: 'string',
@@ -72,24 +52,35 @@ export default defineConfig({
         name: "pages",
         label: "Pages",
         path: "content/pages",
+        match: {
+          include: '*',
+        },
+        format: 'md',
         fields: [
           {
             type: 'boolean',
             name: 'published',
-            label: 'Published'
+            label: 'Опубликовано',
+            description: 'Переключи вправо, чтоб опубликовать. Влево, чтобы скрыть.'
           },
           {
             type: 'string',
-            label: 'Page title',
+            label: 'Заголовок страницы',
+            description: 'Будет на вкладке браузера, а также в описательном блоке при шаринге в соц. сетях',
             name: 'title',
             isTitle: true,
             required: true,
           },
           {
+            type: 'image',
+            label: 'Картинка для поисковиков и соц. сетей',
+            name: 'source',
+          },
+          {
             type: 'object',
             list: true,
             name: 'sections',
-            label: 'Sections',
+            label: 'Секции',
             templates: Object.values(sections),
           },
         ],
@@ -98,6 +89,10 @@ export default defineConfig({
         name: "news",
         label: "News",
         path: "content/news",
+        match: {
+          include: '*',
+        },
+        format: 'md',
         fields: [
           {
             type: 'string',
