@@ -1,32 +1,29 @@
 import type { Template } from 'tinacms'
-import { item } from '../blocks/item'
+import { defaultItem, item } from '../fields/item'
+import { defaultSection, section } from '../fields/section'
 
 export const wideBlock: Template = {
   name: 'wide',
-  label: 'Wide',
-  fields: [
-    {
-      type: 'boolean',
-      name: 'published',
-      label: 'Published'
-    },
-    {
-      type: 'string',
-      label: 'Section title',
-      name: 'title',
-    },
+  label: 'На всю ширину',
+  fields: section([
     {
       type: 'object',
-      label: 'Items',
+      label: 'Блоки',
       name: 'items',
       list: true,
       ui: {
+        defaultItem: () => defaultItem,
         itemProps: (item) => {
           return { label: item?.title }
         },
       },
       fields: item,
     },
-    // add buttons
-  ],
+  ]),
+  ui: {
+    defaultItem: defaultSection({ title: 'На всю ширину' }),
+    itemProps: (item) => {
+      return { label: item?.title }
+    },
+  }
 }
