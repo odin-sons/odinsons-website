@@ -6,7 +6,11 @@ export const section = (fields: TinaField[]): TinaField[] => [
     type: 'boolean',
     name: 'published',
     label: 'Отображение секции',
-    description: 'Переключи вправо, чтоб показывать. Влево, чтобы скрыть.'
+    description: 'Переключи вправо, чтоб показывать. Влево, чтобы скрыть.',
+    toggleLabels: {
+      true: 'Видна',
+      false: 'Скрыта',
+    },
   },
   {
     type: 'string',
@@ -53,7 +57,7 @@ export const section = (fields: TinaField[]): TinaField[] => [
 
 export const defaultSection = (fields = {}) => {
   return {
-    published: false,
+    published: true,
     title: 'Секция',
     subtitle: '',
     width: 'inherited',

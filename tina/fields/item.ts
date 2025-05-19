@@ -7,7 +7,11 @@ export const item: TinaField[] = [
     type: 'boolean',
     name: 'published',
     label: 'Отображение блока',
-    description: 'Переключи вправо, чтоб показать. Влево, чтобы скрыть'
+    description: 'Можно скрыть на случай, если блок не нужен сейчас, но потребуется вскоре',
+    toggleLabels: {
+      true: 'Виден',
+      false: 'Скрыт',
+    },
   },
   {
     type: 'string',
@@ -74,7 +78,7 @@ export const item: TinaField[] = [
 ]
 
 export const defaultItem = {
-  published: false,
+  published: true,
   title: 'Блок',
   subtitle: '',
   text: '',
