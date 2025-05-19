@@ -36,5 +36,12 @@ export default async function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy(asset)
   }
 
+	eleventyConfig.setDataDeepMerge(false);
   eleventyConfig.addWatchTarget('assets/css/**/*.css');
+}
+
+export const config = {
+  dir: {
+    layouts: "_includes/layouts"
+  }
 }
