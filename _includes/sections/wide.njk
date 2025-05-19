@@ -1,0 +1,19 @@
+<section class="
+    section
+    section--{{ section._template }}
+    {% if section.title %}section--width-{{ section.width }}{% endif %}
+  "
+>
+  {%- if section.title or section.subtitle -%}
+  <header>
+    {%- if section.title -%}<h2>{{ section.title }}</h2>{%- endif -%}
+    {%- if section.subtitle -%}<p>{{ section.subtitle }}</p>{%- endif -%}
+  </header>
+  {%- endif -%}
+  {% for item in section.items %}
+    <script>console.log({{ item | dump(2) | safe }})</script>
+  {% endfor %}
+  {% for button in section.buttons %}
+    <script>console.log({{ button | dump(2) | safe }})</script>
+  {% endfor %}
+</section>

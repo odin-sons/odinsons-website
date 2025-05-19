@@ -1,0 +1,11 @@
+---
+layout: base.njk
+permalink: "/{{ page.fileSlug | slug }}/index.html"
+permalinkBypassOutputDir: true
+title: {{ title }}
+---
+{% for section in sections %}
+{%- if section.published == true -%}
+{% include "../sections/" + section._template + ".njk" %}
+{%- endif -%}
+{% endfor %}

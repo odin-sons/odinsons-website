@@ -14,7 +14,6 @@
     <style>
     {% set css %}{% include "_includes/styles.css.njk" %}{% endset %}{{ css | cssmin | safe }}
     </style>
-    {# <link rel="shortcut icon" href="/favicon.png"> #}
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
   </head>
   <body class="page {{ templateClass }}">
