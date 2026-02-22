@@ -28,6 +28,6 @@
   },
   "dependencies": {
     "markdown-it": "^14.1.0",
-    "tinacms": "^1.6.4"
+    "tinacms": "^3.3.1"
   }
 }
